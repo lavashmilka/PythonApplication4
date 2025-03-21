@@ -106,8 +106,10 @@ keskmine=summa/len(vanus)
 print(f"Keskmine vanus on {keskmine}")
  
 #Ulesanne 7
-numbrid=input("Sisesta numbrid: ")
-numbrid=[int(m) for m in numbrid.split()]
+numbrid=[]
+for i in range(5):
+    number=int(input("Kirjuta numbrid: "))
+    numbrid.append(number)
 suund=input("Kas soovid sorteerida kasvavalt või kahanevalt? (kasv/kahan)").lower()
 if suund=="kasv":
         numbrid.sort()
@@ -117,7 +119,6 @@ else:
       print("Vale valik! Kasutame vaikimisi kasvavat soteerimist.")
       numbrid.sort()
 print("Sorteeritud numbrid:", numbrid)  
-
 #Ulesanne 3
 sisend=[10,15,30,45,60,25]                                                                        
 for number in sisend:
